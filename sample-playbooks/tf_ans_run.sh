@@ -1,6 +1,6 @@
 #!/bin/bash
 
-cd ~/ansible-nginx/ansible-nginx/sample-playbooks
+cd ~/ansible_terraform_nginx/sample-playbooks
 terraform init
 terraform fmt
 terraform plan

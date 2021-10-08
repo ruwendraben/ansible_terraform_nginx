@@ -15,7 +15,7 @@ Reduce the burden of setting up the IAAS modules faster, accurate using a cook b
 Ansible, terraform basics and improve AWS managed services knowledge
 
 ## How to Use ##
-1. git clone git@github.com:ruwendraben/ansible_terraform_nginx.git
+1. git clone https://github.com/ruwendraben/ansible_terraform_nginx.git
 
 2. cd ansible_terraform_nginx/sample-playbooks
 
@@ -30,9 +30,11 @@ Note:- 	configure proxy_pass <IP> inside roles/web/nginx/files/index.html
         proxy_pass Server IP should be added to env/hosts file
 
 5. configure host ip file: env/hosts ( example: [webservers]   )
-				                             (          172.31.8.209   )
 
 6. Install Ansible and add relevant keys to access AWS account
 
-7. Run ansible
-   ansible-playbook -i env/hosts site.yaml
+7. cd ansible_terraform_nginx/sample-playbooks
+
+8. Run Deployment script: ./tf_ans_run.sh
+
+Note:- Deployment server you are running should be under the same region (ap-southeast-2), can change from main.tf file. 
