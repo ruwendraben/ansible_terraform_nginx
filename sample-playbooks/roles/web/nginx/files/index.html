@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+  
+<head>
+    <title>DOM Location hostname Property</title>
+    <style>
+        h1 {
+            color: green;
+        }
+          
+        h2 {
+            font-family: Impact;
+        }
+          
+        body {
+            text-align: center;
+        }
+    </style>
+</head>
+  
+<body>
+    <h1>GeeksforGeeks webserver</h1>
+    <h2>DOM Location hostname Property</h2>
+    <p>
+      For returning the hostname of the current
+      URL, double click the "Return hostname" button:
+    </p>
+    <button onclick="myhost()">
+      Return hostname
+    </button>
+    <p id="hostname"></p>
+    <script> 
+        function myhost() {
+            var h = location.hostname;
+            document.getElementById("hostname").innerHTML = h;
+        }
+    </script>
+    <p>
+      For returning the hostname of the current
+      URL, double click the "Return instance id" button:
+    </p>
+    <button onclick="my_ins_id()">
+      Return aws instance-id
+    </button>
+    <p "instance_id"></p>
+    <script> 
+        function my_ins_id() {
+            var h2 = `ec2metadata --instance-id`;
+            document.getElementById("instance_id").innerHTML = h2;
+        }
+    </script>
+
+</body>
+  
+</html>
+
